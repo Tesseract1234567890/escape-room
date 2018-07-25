@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+
+    <title>This is so sad! Alexa, play Despacito.</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="text-obj" src="assets/tinker.obj"></a-asset-item>
+            <a-asset-item id="text-mtl" src="assets/obj.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 5 0">
+            <a-cursor></a-cursor>
+            <a-entity geometry="primitive: plane; height: 1; width: 1" position="1 0 -1" material="color: gray; opacity: 0.9" text="eree">
+
+            </a-entity>
+            <a-text height="0.1" width="1" color="red" position="0.5 0.0 -1" wrap-count="20" id="hud" value=items></a-text>
+        </a-camera>
+        <a-sky></a-sky>
+
+        <!--<a-light type="ambient" color="grey" target="#bed"></a-light>-->
+
+        <a-entity position="1 15 -31" id="mrd" obj-model="obj: #text-obj; mtl: #text-mtl" rotation="-90 0 0" scale="0.1 0.1 0.1"></a-entity>
+
+
+        <a-entity static-body position="0 -10 0" gblock="https://poly.google.com/view/epElsuhDoKg"></a-entity>
+
+        <a-entity gblock="https://poly.google.com/view/5ULLUuTrK5y" id="bunny" static-body position="5 -7 -23.5 " scale="7 7 7" rotation="0 -90 0"></a-entity>
+
+        <a-entity gblock="https://poly.google.com/view/axVdRGg-Lbl" id="suitcase" static-body position="-13 -10 -20" scale="2 2 2"></a-entity>
+
+        <a-entity gblock="https://poly.google.com/view/4UuDHXFJ7I0" scale=".3 .3 .3" id="computer" static-body position="7 3.313 29.5" rotation=" 0 180 0"></a-entity>
+
+        <a-entity gblock="https://poly.google.com/view/8mkAgVYGbL4" id="bed" static-body position="1 -8 -25 " scale="1.2 1 1.2"></a-entity>
+
+        <!-- Keyboard-->
+        <a-box text="1" position="1 14 -31" class="key1"></a-box>
+        <a-text height="100" width="100" color="white" position="1 14 -31" class="key1" value="1"></a-text>
+
+        <!---->
+
+        <a-entity class="player" id="player" camera jump-ability universal-controls kinematic-body position="1 4 2">
+        </a-entity>
+
+
+
+
+    </a-scene>
+    <script src="script.js"></script>
+</body>
+
+</html>
