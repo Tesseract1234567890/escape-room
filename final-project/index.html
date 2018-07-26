@@ -6,7 +6,7 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
-    <title>This is so sad! Alexa, play Despacito.</title>
+    <title>Escape Room</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
@@ -19,8 +19,8 @@
         <a-camera position="0 7 0" wasd-controls="acceleration: 300">
             <a-entity geometry="primitive: plane; height: 1; width: 1" position="1 0 -1" material="color: gray; opacity: 0.9">
             </a-entity>
-            <a-text height="0.1" width="1" color="red" position="0.5 0.0 -1" wrap-count="20" id="hud" value=items></a-text>
-            <a-cursor color = red></a-cursor>
+            <a-text height="0.1" width="1" color="red" position="0.5 0.0 -1" wrap-count="40" id="hud" value=items></a-text>
+            <a-cursor color=red></a-cursor>
         </a-camera>
         <!--<a-entity class="player" id="player" camera jump-ability universal-controls kinematic-body position="0 5 0">-->
         <!--</a-entity>-->
@@ -39,35 +39,40 @@
         <a-entity static-body gblock="https://poly.google.com/view/e29LlIx3T2F" id="pizza" static-body position="10 3.5 28" rotation="0 -90 0" scale="1.31.31.3"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/ap9I6sv347V" id="gun" static-body position="29 -7 -10.9" scale=".6 .6 .6"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/0X5xcxjszwI" id="knife" static-body position="-4 0 -10" rotation="0 0 -90" scale=".5 .5 .5"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/9OBTRVYUSmt" id="bunny2" static-body position="22.8 .15 7.7" rotation="0 -90 0" scale=".2 .2 .2"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/9OBTRVYUSmt" id="bunny3" static-body position="22.8 .15 15" rotation="0 -90 0" scale=".2 .2 .2"></a-entity>
+
+
         <!--Keyboard-->
-        <a-box height="3" width="3" color="black" position="-1.3 14 -31.5" class="key1" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="1.8 14 -31.5" class="key2" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="4.9 14 -31.5" class="key3" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="-1.3 10.9 -31.5" class="key4" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="1.8 10.9 -31.5" class="key5" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="4.9 10.9 -31.5" class="key6" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="-1.3 7.8 -31.5" class="key7" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="1.8 7.8 -31.5" class="key8" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="4.9 7.8 -31.5" class="key9" value="1"></a-box>
-        <a-box height="3" width="3" color="black" position="1.8 4.7 -31.5" class="key0" value="1"></a-box>
-        <a-text height="100" width="100" color="white" position="-3 14 -30.7" class="key1" value="1"></a-text>
-        <a-text height="100" width="100" color="white" position="0 14 -30.7" class="key2" value="2"></a-text>
-        <a-text height="100" width="100" color="white" position="3 14 -30.7" class="key3" value="3"></a-text>
-        <a-text height="100" width="100" color="white" position="-3 11 -30.7" class="key4" value="4"></a-text>
-        <a-text height="100" width="100" color="white" position="0 11 -30.7" class="key5" value="5"></a-text>
-        <a-text height="100" width="100" color="white" position="3 11 -30.7" class="key6" value="6"></a-text>
-        <a-text height="100" width="100" color="white" position="-3 8 -30.7" class="key7" value="7"></a-text>
-        <a-text height="100" width="100" color="white" position="0 8 -30.7" class="key8" value="8"></a-text>
-        <a-text height="100" width="100" color="white" position="3 8 -30.7" class="key9" value="9"></a-text>
-        <a-text height="100" width="100" color="white" position="0 5 -30.7" class="key0" value="0"></a-text>
+        <a-box height="1" width="1" color="black" position="-1.3 14 -31.5" class="key1" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="1.8 14 -31.5" class="key2" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="4.9 14 -31.5" class="key3" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="-1.3 10.9 -31.5" class="key4" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="1.8 10.9 -31.5" class="key5" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="4.9 10.9 -31.5" class="key6" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="-1.3 7.8 -31.5" class="key7" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="1.8 7.8 -31.5" class="key8" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="4.9 7.8 -31.5" class="key9" value="1"></a-box>
+        <a-box height="1" width="1" color="black" position="1.8 4.7 -31.5" class="key0" value="1"></a-box>
+        <a-text height="33" width="33" color="white" position="-3 14 -30.7" class="key1" value="1"></a-text>
+        <a-text height="33" width="33" color="white" position="0 14 -30.7" class="key2" value="2"></a-text>
+        <a-text height="33" width="33" color="white" position="3 14 -30.7" class="key3" value="3"></a-text>
+        <a-text height="33" width="33" color="white" position="-3 11 -30.7" class="key4" value="4"></a-text>
+        <a-text height="33" width="33" color="white" position="0 11 -30.7" class="key5" value="5"></a-text>
+        <a-text height="33" width="33" color="white" position="3 11 -30.7" class="key6" value="6"></a-text>
+        <a-text height="33" width="33" color="white" position="-3 8 -30.7" class="key7" value="7"></a-text>
+        <a-text height="33" width="33" color="white" position="0 8 -30.7" class="key8" value="8"></a-text>
+        <a-text height="33" width="33" color="white" position="3 8 -30.7" class="key9" value="9"></a-text>
+        <a-text height="33" width="33" color="white" position="0 5 -30.7" class="key0" value="0"></a-text>
         <a-cursor></a-cursor>
-        
-        <a-entity id= "timer">
-            <a-box height="3" width="3" color="black" position=""-27 10 -32.5"" value="Time Left:"> 
+
+        <a-entity id="timer">
+            <a-box height="3" width="3" color="black" position="" -27 10 -32.5 "" value="Time Left:">
             </a-box>
         </a-entity>
-  
+
     </a-scene>
     <script src="script.js"></script>
 </body>
+
 </html>
