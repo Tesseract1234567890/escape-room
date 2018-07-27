@@ -15,17 +15,21 @@
         <a-assets>
             <a-asset-item id="text-obj" src="assets/tinker.obj"></a-asset-item>
             <a-asset-item id="text-mtl" src="assets/obj.mtl"></a-asset-item>
+            <audio src="ElevatorBell.mp3" id="sound1"></audio>
+            <audio src="walkandgrunt.mp3" id="sound2"></audio>
+            <audio src="CreakingDoor.mp3" id="sound3"></audio>
+
         </a-assets>
         <a-camera position="0 7 0" wasd-controls="acceleration: 300">
             <a-entity geometry="primitive: plane; height: 1; width: 1" position="1 0 -1" material="color: gray; opacity: 0.9">
             </a-entity>
-            <a-text height="0.1" width="1" color="red" position="0.5 0.0 -1" wrap-count="40" id="hud" value=items></a-text>
+            <a-text height="0.1" width="1" color="black" position="0.5 0.0 -1" wrap-count="40" id="hud" value=items></a-text>
             <a-cursor color=red></a-cursor>
         </a-camera>
         <!--<a-entity class="player" id="player" camera jump-ability universal-controls kinematic-body position="0 5 0">-->
         <!--</a-entity>-->
         </a-camera>
-        <a-sky></a-sky>
+        <a-sky color="black"></a-sky>
         <!--<a-light type="ambient" color="grey" target="#bed"></a-light>-->
         <a-entity static-body position="1 15 -31" id="mrd" obj-model="obj: #text-obj; mtl: #text-mtl" rotation="-90 0 0" scale="0.1 0.1 0.1"></a-entity>
         <a-entity static-body position="0 -10 0" gblock="https://poly.google.com/view/epElsuhDoKg"></a-entity>
@@ -38,9 +42,12 @@
         <a-entity static-body gblock="https://poly.google.com/view/8xS3dny-K_z" id="rug" static-body position="7 -8 4" scale="4 4 4"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/e29LlIx3T2F" id="pizza" static-body position="10 3.5 28" rotation="0 -90 0" scale="1.31.31.3"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/ap9I6sv347V" id="gun" static-body position="29 -7 -10.9" scale=".6 .6 .6"></a-entity>
-        <a-entity static-body gblock="https://poly.google.com/view/0X5xcxjszwI" id="knife" static-body position="-4 0 -10" rotation="0 0 -90" scale=".5 .5 .5"></a-entity>
+        <a-entity static-body gblock="https://poly.google.com/view/0X5xcxjszwI" id="knife" static-body position="-4 -1.5 -10" rotation="0 0 -90" scale=".5 .5 .5"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/9OBTRVYUSmt" id="bunny2" static-body position="22.8 .15 7.7" rotation="0 -90 0" scale=".2 .2 .2"></a-entity>
         <a-entity static-body gblock="https://poly.google.com/view/9OBTRVYUSmt" id="bunny3" static-body position="22.8 .15 15" rotation="0 -90 0" scale=".2 .2 .2"></a-entity>
+       
+         <a-entity  id="door" ></a-entity>
+        
 
 
         <!--Keyboard-->
@@ -66,9 +73,9 @@
         <a-text height="33" width="33" color="white" position="0 5 -30.7" class="key0" value="0"></a-text>
         <a-cursor></a-cursor>
 
-        <a-entity id="timer">
-            <a-box height="3" width="3" color="black" position="" -27 10 -32.5 "" value="Time Left:">
-            </a-box>
+        <a-entity id="time">
+            <a-text id="timer" height="33" width="33" color="white" position="-12 11 -30.7" value="">
+            </a-text>
         </a-entity>
 
     </a-scene>
