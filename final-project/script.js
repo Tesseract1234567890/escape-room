@@ -228,7 +228,7 @@ let time = 0;
 let timeString = ""
 setInterval(function() {
     let delta = Date.now() - start; // milliseconds elapsed since start
-    time = (10 - (Math.floor(delta / 1000)))
+    time = (600 - (Math.floor(delta / 1000)))
     timeString = time.toString();
     timer.setAttribute("value", timeString + " seconds")
     // in seconds
